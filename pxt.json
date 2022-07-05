@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "koi": "github:kittenbot/pxt-koi#v0.6.8",
-        "pxt-PlanetX-AI": "github:elecfreaks/pxt-PlanetX-AI#v0.3.4"
+        "pxt-PlanetX-AI": "github:elecfreaks/pxt-PlanetX-AI#v0.3.4",
+        "powerbrick": "github:kittenbot/pxt-powerbrick#v0.3.9"
     },
     "files": [
         "main.blocks",
