@@ -33,8 +33,8 @@ MakerCloud_KOI.connectMakerCloudMQTT()
 basic.pause(1000)
 MakerCloud_KOI.subscribeTopic("ZBOP3RO2")
 MakerCloud_KOI.subscribeTopic("BMTOR6T1")
-MakerCloud_KOI.subscribeTopic("BMTOR6T1")
-MakerCloud_KOI.subscribeTopic("BMTOR6T1")
+MakerCloud_KOI.subscribeTopic("NBGLJS62")
+MakerCloud_KOI.subscribeTopic("BVKZV6T5")
 basic.pause(1000)
 basic.forever(function () {
 	
