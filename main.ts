@@ -4,10 +4,19 @@ MakerCloud.on_wifi_disconnected(function () {
 MakerCloud.on_wifi_connected(function () {
     koi.koi_cloud_tts("wifi connected")
 })
-koi.koi_onrecttrack(function (x, y, w, h) {
-    koi.koi_track_rect(6000)
+MakerCloud_KOI.registerTopicMessageHandler("BMTOR6T1", function (receivedMessage) {
+    if (receivedMessage == "trace") {
+        koi.koi_cloud_tts("start tracing")
+        while (false) {
+            koi.koi_track_rect(6000)
+        }
+    } else {
+        if (receivedMessage == "stop") {
+        	
+        }
+    }
 })
-MakerCloud_KOI.registerTopicMessageHandler("topic", function (receivedMessage) {
+koi.koi_onrecttrack(function (x, y, w, h) {
 	
 })
 koi.koi_init_pw(koi.SerialPorts.PORT2)
