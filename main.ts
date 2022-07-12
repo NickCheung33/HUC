@@ -17,6 +17,12 @@ function autofollow () {
         powerbrick.MotorRun(powerbrick.Motors.M2, 0)
     }
 }
+input.onButtonPressed(Button.A, function () {
+    powerbrick.Servo(powerbrick.Servos.S3, 20)
+})
+input.onButtonPressed(Button.B, function () {
+    powerbrick.Servo(powerbrick.Servos.S3, -20)
+})
 basic.forever(function () {
     autofollow()
 })
