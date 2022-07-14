@@ -2,7 +2,7 @@ MakerCloud_KOI.registerTopicMessageHandler("BMTOR6T1", function (receivedMessage
     if (receivedMessage == "follow") {
         flag = !(flag)
     } else if (receivedMessage == "stop") {
-        flag = flag
+        flag = false
     }
 })
 function autofollow () {
