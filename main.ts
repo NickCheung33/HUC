@@ -8,13 +8,13 @@ MakerCloud_KOI.registerTopicMessageHandler("BMTOR6T1", function (receivedMessage
 function autofollow () {
     left_sonar = powerbrick.Ultrasonic(powerbrick.Ports.PORT3)
     right_sonar = powerbrick.Ultrasonic(powerbrick.Ports.PORT4)
-    if (right_sonar > 5 && right_sonar < 70 && (left_sonar > 5 && left_sonar < 70)) {
+    if (right_sonar > 10 && right_sonar < 70 && (left_sonar > 10 && left_sonar < 70)) {
         powerbrick.MotorRun(powerbrick.Motors.M1, 255)
         powerbrick.MotorRun(powerbrick.Motors.M2, 255)
-    } else if (right_sonar > 70 && (left_sonar > 5 && left_sonar < 70)) {
+    } else if (right_sonar > left_sonar + 1) {
         powerbrick.MotorRun(powerbrick.Motors.M2, -255)
         powerbrick.MotorRun(powerbrick.Motors.M1, 255)
-    } else if (left_sonar > 70 && (right_sonar > 5 && right_sonar < 70)) {
+    } else if (left_sonar > right_sonar + 1) {
         powerbrick.MotorRun(powerbrick.Motors.M2, 255)
         powerbrick.MotorRun(powerbrick.Motors.M1, -255)
     } else {
