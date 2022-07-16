@@ -11,10 +11,10 @@ function autofollow () {
     if (right_sonar > 10 && right_sonar < 70 && (left_sonar > 10 && left_sonar < 70)) {
         powerbrick.MotorRun(powerbrick.Motors.M1, 255)
         powerbrick.MotorRun(powerbrick.Motors.M2, 255)
-    } else if (right_sonar > left_sonar + 1) {
+    } else if (right_sonar > left_sonar + 5) {
         powerbrick.MotorRun(powerbrick.Motors.M2, -255)
         powerbrick.MotorRun(powerbrick.Motors.M1, 255)
-    } else if (left_sonar > right_sonar + 1) {
+    } else if (left_sonar > right_sonar + 5) {
         powerbrick.MotorRun(powerbrick.Motors.M2, 255)
         powerbrick.MotorRun(powerbrick.Motors.M1, -255)
     } else {
